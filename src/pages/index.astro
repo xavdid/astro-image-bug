@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import og from "../assets/first.jpg";
+import cover from "../assets/second.jpg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Direct import</title>
+    <meta property="og:image" content={og.src} />
+  </head>
+  <body>
+    <p>
+    image using direct import:
+    </p>
+    <img id="direct" src={og.src} alt="MISSING" />
+    <p>
+    image using Image component:
+    </p>
+    <Image src={cover} alt="MISSING" format="webp" />
+  </body>
+</html>
